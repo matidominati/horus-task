@@ -12,7 +12,7 @@ import static org.horus.task.util.DataGenerator.createCompositeBlock;
 public class Main {
     public static void main(String[] args) {
         final String COLOR = "Black";
-        final String MATERIAL = "Wood";
+        final String MATERIAL = "Brick";
 
         Block block1 = createBlock("Black", "Wood");
         Block block2 = createBlock("Black", "Concrete");
@@ -34,9 +34,9 @@ public class Main {
         );
 
         //findBlocksByMaterial
-        List<Block> brickBlocks = wall.findBlocksByMaterial(MATERIAL);
-        if (!brickBlocks.isEmpty()) {
-            System.out.println("Found blocks: " + brickBlocks);
+        List<Block> blocks = wall.findBlocksByMaterial(MATERIAL);
+        if (!blocks.isEmpty()) {
+            System.out.println("Found blocks: " + blocks);
         } else {
             System.out.println("No blocks found with material Brick");
         }
