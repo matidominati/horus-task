@@ -27,8 +27,8 @@ public class Main {
 
         Wall wall = new Wall(List.of(compositeBlock, block6, block7, block8));
 
-        //findBlocksByColor
-        wall.findBlocksByColor(COLOR).ifPresentOrElse(
+        //findBlockByColor
+        wall.findBlockByColor(COLOR).ifPresentOrElse(
                 block -> System.out.println("Found block: " + block),
                 () -> System.out.println("No " + COLOR + " block found")
         );
