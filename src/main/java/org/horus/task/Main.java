@@ -38,7 +38,7 @@ public class Main {
         if (!blocks.isEmpty()) {
             System.out.println("Found blocks: " + blocks);
         } else {
-            System.out.println("No blocks found with material Brick");
+            System.out.println("No blocks found with material " + MATERIAL);
         }
 
         //count
