@@ -14,14 +14,17 @@ public class Wall implements Structure {
     private List<Block> blocks;
 
     public Wall(List<Block> blocks) {
+        if (blocks == null) {
+            throw new IllegalArgumentException("Block list cannot be null");
+        }
         this.blocks = blocks;
     }
 
     @Override
     public Optional<Block> findBlockByColor(String color) {
         return getAllBlocks(blocks)
-                .filter(block -> block.getColor().equals(color))
-                .findAny();
+                .filter(block -> block.getMaterial().equals(color))
+                        .findAny();
     }
 
     @Override
