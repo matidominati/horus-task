@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import static java.util.Arrays.*;
 import static junit.framework.TestCase.assertEquals;
 import static org.horus.task.util.DataGenerator.createBlock;
 import static org.horus.task.util.DataGenerator.createCompositeBlock;
@@ -59,8 +60,8 @@ public class WallTest {
     private Wall generateData() {
         Block block1 = createBlock("red", "wood");
         Block block2 = createBlock("blue", "brick");
-        CompositeBlock compositeBlock = createCompositeBlock(Arrays.asList(block1, block2));
-        Wall wall = new Wall(Arrays.asList(compositeBlock));
+        CompositeBlock compositeBlock = createCompositeBlock(asList(block1, block2));
+        Wall wall = new Wall(asList(compositeBlock));
         return wall;
     }
 }
