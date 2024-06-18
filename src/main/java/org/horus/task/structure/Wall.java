@@ -23,7 +23,7 @@ public class Wall implements Structure {
     @Override
     public Optional<Block> findBlockByColor(String color) {
         return getAllBlocks(blocks)
-                .filter(block -> block.getMaterial().equals(color))
+                .filter(block -> block.getColor().equals(color))
                         .findAny();
     }
 
